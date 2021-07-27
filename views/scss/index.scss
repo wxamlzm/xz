@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@mixin btn($w,$h) {
+  width: $w;
+  height: $h;
+  background-color: #0aa1ed;
+  color: #FFF;
+  border: none;
+  border-radius: 3px;
+  @if $w == 130 {
+    font-size: 16px;
+  }@else if $w == 100{
+    font-size: 14px;
+  }
+}
+
+.zdy-h370 {height: 370px;}
+.zdy-h230 {height: 230px;}
+
+.xz-indexpart {
+  // 1
+  .xz-index-1 {
+    // 第一块
+    position: relative;
+    background-color: #E8E8E8;
+    img {
+      position: absolute;
+      top: 10%;
+      right: 4%;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.1);
+        
+      }
+    }
+    .xz-index-text {
+      position: relative;
+      top: 10%;
+      left: 10%;
+      width: 40%;
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 12px;
+        color: #808080;
+      }
+      h5 {
+        font-size: 18px;
+        color: #0aa1ed;
+      }
+      button {
+        @include btn(130px, 40px);
+      }
+    }
+  }
+  // 4
+  .xz-index-4 {
+    background-color: #E8E8E8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+    }
+    .xz-index-text {
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        color: #000;
+      }
+      h3 {
+        margin: 0;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #0aa1ed;
+      }
+      button {
+        margin-top: 10px;
+        @include btn(100px, 30px);
+      }
+    }
+  }
+}
+
+/* 不能只考虑pc 还要考虑sm的时候黄色会下去，列1会填满整行因此，直接给列1去内边距不合适（媒体查询必须写） */
+/* 写媒体查询 */
+/* min-width: 576px 是sm以上 */
+@media (min-width: 576px) {
+  /* 缩小时左右内边距都为0 */
+  .xz-sg >div:nth-child(1) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .xz-indexpart {
+    .xz-index-2{
+      background-color: #E8E8E8;
+      position: relative;
+      img {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        width: 45%;
+        transition: 1s;
+        &:hover{
+          transform: scale(1.03);
+        }
+      }
+      .xz-index-text {
+        position: relative;
+        width: 50%;
+        left: 7%;
+        top: 10%;
+        h3 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 12px;
+          color: #808080;
+        }
+        h5 {
+          font-size: 18px;
+          color: #0aa1ed;
+        }
+        button{
+          @include btn(130px,40px)
+        }
+      }
+    }
+    .xz-index-3 {
+      background-color: #E8E8E8;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      & > div {
+        position: relative;
+        top: 15%;
+        left: 7%;
+        width: 35%;
+        h3 {
+          font-size: 18px;
+        }
+        h5 {
+          font-size: 18px;
+          color:#0aa1ed;
+        }
+        button {
+          @include btn(130px, 40px);
+        }
+      }
+      & > img {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        width: 45%;
+        transition: 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/* min-width: 992px 是lg以上 */
+@media (min-width: 992px) {
+  /* 放大时，只有左内边距为0，右内边距为原来的15px */
+  .xz-sg >div:nth-child(1) {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  .xz-indexpart {
+    // 2
+    .xz-index-2 {
+      background-color: #E8E8E8;
+      position: relative;
+      img {
+        position: absolute;
+        width: 60%;
+        top: 25%;
+        bottom: 6%;
+        transition: 1s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .xz-index-text {
+        position: relative;
+        top: 10%;
+        left: 10%;
+        width: 50%;
+        h3 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 12px;
+          color: #808080;
+        }
+        h5 {
+          font-size: 18px;
+          color: #0aa1ed;
+        }
+        button {
+          @include btn(130px, 40px);
+        }
+      }
+    }
+    // 3
+    .xz-col3 {
+      padding-right: 15px !important;
+      & > div {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .xz-index-3 {
+      background-color: #E8E8E8;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      & > div {
+        position: relative;
+        top: 20%;
+        left: 10%;
+        width: 35%;
+        h3 {
+          font-size: 24px;
+        }
+        h5 {
+          font-size: 18px;
+          color:#0aa1ed;
+        }
+        button {
+          @include btn(130px, 40px);
+        }
+      }
+      & > img {
+        position: absolute;
+        top: 20%;
+        right: 6%;
+        width: 49%;
+        transition: 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      } 
+    }
+  }
+}
+
+

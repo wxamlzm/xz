@@ -1,0 +1,19 @@
+.xz-card {
+  margin-bottom: 10px;
+}
+.xz-card h5 {
+  color: #0aa1ed;
+}
+.xz-card p {
+  color: #808080;
+}
+.xz-shop input {
+  width: 30px;
+}
+.xz-shop > div > button {
+  width: 30px;
+}
+/* 加入购物车按钮的字体大小 */
+.xz-shop > button {
+  font-size: 14px;
+}

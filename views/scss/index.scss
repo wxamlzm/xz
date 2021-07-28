@@ -12,7 +12,30 @@
     font-size: 14px;
   }
 }
-
+// NAV部分
+.xz-search {
+  width: 55%;
+}
+/* md:768px为分界线，其控制的小于md以下的宽度 */
+@media screen and (max-width:768px) {
+  .xz-search {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+.xz-search input {
+  outline: none;
+  background-image: url("../img/header//search.png");
+  background-repeat: no-repeat;
+  background-position:right;
+  background-size: auto 100%;
+}
+.xz-menu a:nth-child(n+4) {
+  font-size: 12px;
+  color: #808080;
+  line-height: 24px;
+}
+// main 部分
 .zdy-h370 {height: 370px;}
 .zdy-h230 {height: 230px;}
 
@@ -251,4 +274,25 @@
   }
 }
 
-
+// footer部分
+.xz-footer {
+  background-color: #FFF;
+  ul {
+    line-height: 2;
+    font-size: 12px;
+    color: #808080;
+    // 每个ul一列的标题
+    & > li:first-child {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width:992px) {
+  .xz-footer div[class='float-left'] {
+    width: 50%;
+  }
+}

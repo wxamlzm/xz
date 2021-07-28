@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <title>xz-list</title>
+  <style>
+    .zdy-h370 {
+      height: 370px;
+    }
+    .zdy-h230 {
+      height: 230px;
+    }
+    /* min-width:576px 是sm以上的范围 */
+    @media screen and (min-width:576px){
+      .zdy-hts {
+        height: 230px;
+      }
+    }
+    /* min-width:992px 是lg以上的范围 */
+    @media screen and (min-width:992px){
+      .zdy-hts {
+        height: 370px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- 第一列 因为是同样html格式，所以不光要考虑pc端，还需要考虑移动端，所以样式还是必须写查询-->
+      <div class="col-lg-7 col-sm-12 zdy-h370 bg-primary p-sm-0 pr-lg-3">
+      </div>
+      <!-- 第二列 在sm的时候高度是auto，它依据的是同行的列的高度，但自动终究是受依靠方的元素影响的(自主性差，可调整低,如需自定义效果更佳，可使用媒体查询单独为这行的两个元素重新改高度)-->
+      <div class="col-lg-5 col-sm-7 zdy-hts bg-danger"></div>
+      <!-- 第三列 -->
+      <div class="col-lg-5 col-sm-5 zdy-h230 bg-info"></div>
+      <!-- 第四到第六列 -->
+      <!-- 碰到格子相同，图片大小不一致的情况，需要将就小的，因为小图放大会模糊 -->
+      <div class="col-lg-7 col-sm-12">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 zdy-h230 bg-secondary"></div>
+          <div class="col-lg-4 col-sm-4 zdy-h230 bg-warning"></div>
+          <div class="col-lg-4 col-sm-4 zdy-h230 bg-dark"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

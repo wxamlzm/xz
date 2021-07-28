@@ -19,6 +19,14 @@
   color: #808080;
   line-height: 24px; }
 
+.carousel > ul > li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FFF; }
+  .carousel > ul > li.active {
+    background-color: #0aa1ed; }
+
 .zdy-h370 {
   height: 370px; }
 
@@ -244,7 +252,7 @@
     font-size: 14px; }
 
 @media screen and (min-width: 992px) {
-  .xz-footer div[class='float-left'] {
+  .xz-footer div.float-left {
     width: 50%; } }
 
 /*# sourceMappingURL=index.css.map */

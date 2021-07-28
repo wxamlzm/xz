@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body {
+  background-color: #F5F5F5;
+}
+.xz-tit {
+  height: 36px;
+  background-color: #e8e8e8;
+  img {
+    float: left;
+    margin-top: 8px;
+  }
+  span {
+    float: left;
+    font-size: 16px;
+    color: #808080;
+    line-height: 36px;
+  }
+}

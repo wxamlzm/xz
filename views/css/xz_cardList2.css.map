@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACA,IAAK;EACH,gBAAgB,EAAE,OAAO;;AAE3B,OAAQ;EACN,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;EACzB,WAAI;IACF,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,GAAG;EAEjB,YAAK;IACH,KAAK,EAAE,IAAI;IACX,SAAS,EAAE,IAAI;IACf,KAAK,EAAE,OAAO;IACd,WAAW,EAAE,IAAI",
+"sources": ["../scss/xz_cardList2.scss"],
 "names": [],
 "file": "xz_cardList2.css"
 }
